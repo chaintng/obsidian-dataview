@@ -25,10 +25,20 @@ Sources of the form `"folder"`. These match all files / sections / tasks contain
 ~~~
 ```dataview
 TABLE file.ctime, status
-FROM "projects/brainstorming"
+FROM "projects/brainstorming" OR "
 ```
 ~~~
 
+!!! tip 
+    Use ``"`=this.file.folder`"`` to refer to the current folder.
+
+
+~~~
+```dataview
+TABLE file.ctime, status
+FROM `"=this.file.folder"`
+```
+~~~
 
 ### Specific Files
 
